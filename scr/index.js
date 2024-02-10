@@ -1,8 +1,12 @@
-const express = ('express');
+const express = require("express");
 
-const app = express('');
-const port = 3500;
+const app = express();
+const port = 9000;
 
-app.liste(port,() => { 
+app.get('/',(req,res) => {
+    res.send("bienvenidos a mi API")
+})
+
+app.liste(port,() => 
 console.log('el server esta corriendo',port)
-});
+);
